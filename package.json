@@ -1,0 +1,26 @@
+{
+	"name": "parcel-craft",
+	"version": "1.0.0",
+	"source": "src/js/app.js",
+	"targets": {
+		"default": {
+			"distDir": "./web/dist"
+		}
+	},
+	"scripts": {
+		"dev": "parcel watch src/js/*.js --dist-dir ./web/dist",
+		"build": "parcel build src/js/*.js --dist-dir ./web/dist"
+	},
+	"devDependencies": {
+		"@parcel/transformer-sass": "2.5.0",
+		"@vue/compiler-sfc": "^3.2.33",
+		"sass": "^1.51.0"
+	},
+	"dependencies": {
+		"@swc/helpers": "^0.3.8",
+		"parcel": "^2.5.0",
+		"regenerator-runtime": "^0.13.9"
+	},
+	"private": true,
+	"browserslist": "> 0.5%, last 2 versions, not dead"
+}
