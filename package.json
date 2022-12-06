@@ -3,16 +3,14 @@
 	"version": "1.0.0",
 	"source": "src/js/app.js",
 	"targets": {
-		"default": {
-			"distDir": "./web/dist"
-		}
+
 	},
 	"scripts": {
 		"dev": "parcel watch src/js/*.js --dist-dir ./web/dist",
 		"build": "parcel build src/js/*.js --dist-dir ./web/dist"
 	},
 	"devDependencies": {
-		"@parcel/transformer-sass": "2.5.0",
+		"@parcel/transformer-sass": "2.8.0",
 		"@vue/compiler-sfc": "^3.2.33",
 		"sass": "^1.51.0"
 	},
