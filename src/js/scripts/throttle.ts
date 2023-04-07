@@ -1,11 +1,9 @@
-export default function throttle(func, delay) {
-  let wait = false;
-
+export default function throttle(func: Function, delay: number): Function {
+  let wait: boolean = false;
   return (...args) => {
     if (wait) {
         return;
     }
-
     func(...args);
     wait = true;
     setTimeout(() => {

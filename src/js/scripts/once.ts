@@ -1,6 +1,6 @@
-export default function once(func) {
-  let ran = false;
-  let result;
+export default function once(func: Function): Function {
+  let ran: boolean = false;
+  let result: any;
   return function() {
     if (ran) return result;
     result = func.apply(this, arguments);

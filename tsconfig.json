@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+		"strict": true,
+		"target": "es2021",
+		"forceConsistentCasingInFileNames": false,
+    "experimentalDecorators": true,
+    "jsxImportSource": "preact",
+		"isolatedModules": true
+  },
+  "include": ["src/**/*"],
+}

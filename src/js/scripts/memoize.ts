@@ -1,7 +1,7 @@
-export default function memoize(func) {
-  const cache = new Map();
+export default function memoize(func: Function): Function {
+  const cache: any = new Map();
   return function() {
-    const key = JSON.stringify(arguments);
+    const key: string = JSON.stringify(arguments);
     if (cache.has(key)) {
         return cache.get(key);
     }

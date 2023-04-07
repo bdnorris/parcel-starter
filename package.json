@@ -2,9 +2,7 @@
 	"name": "parcel-craft",
 	"version": "1.0.0",
 	"source": "src/js/app.js",
-	"targets": {
-
-	},
+	"targets": {},
 	"scripts": {
 		"dev": "parcel watch src/js/*.js --dist-dir ./web/dist",
 		"build": "parcel build src/js/*.js --dist-dir ./web/dist"
@@ -15,6 +13,7 @@
 		"sass": "^1.51.0"
 	},
 	"dependencies": {
+		"@parcel/validator-typescript": "^2.8.3",
 		"@swc/helpers": "^0.3.8",
 		"parcel": "^2.5.0",
 		"regenerator-runtime": "^0.13.9"
