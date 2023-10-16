@@ -1,11 +1,11 @@
 {
 	"name": "parcel-craft",
 	"version": "1.0.0",
-	"source": "src/js/app.js",
+	"source": "src/js/app.ts",
 	"targets": {},
 	"scripts": {
-		"dev": "parcel watch src/js/*.js --dist-dir ./web/dist",
-		"build": "parcel build src/js/*.js --dist-dir ./web/dist"
+		"dev": "parcel watch src/js/*.ts --dist-dir ./web/dist",
+		"build": "parcel build src/js/*.ts --dist-dir ./web/dist"
 	},
 	"devDependencies": {
 		"@parcel/transformer-sass": "2.8.3",
@@ -13,9 +13,9 @@
 		"sass": "^1.61.0"
 	},
 	"dependencies": {
-		"@parcel/validator-typescript": "^2.8.3",
+		"@parcel/validator-typescript": "^2.10.0",
 		"@swc/helpers": "^0.5.0",
-		"parcel": "^2.8.3",
+		"parcel": "^2.10.0",
 		"regenerator-runtime": "^0.13.11"
 	},
 	"private": true,
