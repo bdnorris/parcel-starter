@@ -8,17 +8,18 @@
 		"build": "parcel build src/js/*.ts --dist-dir ./web/dist"
 	},
 	"devDependencies": {
-		"@parcel/transformer-sass": "2.13.3",
-		"@parcel/transformer-vue": "2.13.3",
-		"@vue/compiler-sfc": "^3.5.13",
-		"sass": "^1.85.0"
+		"@parcel/transformer-sass": "2.15.4",
+		"@parcel/transformer-vue": "2.15.4",
+		"@vue/compiler-sfc": "^3.5.17",
+		"sass": "^1.89.2",
+		"typescript": "^5.8.3"
 	},
 	"dependencies": {
-		"@parcel/validator-typescript": "^2.13.3",
-		"@swc/helpers": "^0.5.15",
-		"parcel": "^2.13.3",
+		"@parcel/validator-typescript": "^2.15.4",
+		"@swc/helpers": "^0.5.17",
+		"parcel": "^2.15.4",
 		"regenerator-runtime": "^0.14.1",
-		"vue": "^3.5.13"
+		"vue": "^3.5.17"
 	},
 	"private": true,
 	"browserslist": "> 0.5%, last 2 versions, not dead"
