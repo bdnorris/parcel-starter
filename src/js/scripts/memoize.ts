@@ -1,11 +1,11 @@
 export default function memoize(func: Function): Function {
   const cache: any = new Map();
-  return function() {
-    const key: string = JSON.stringify(arguments);
+  return function(...args: any[]) {
+    const key: string = JSON.stringify(args);
     if (cache.has(key)) {
         return cache.get(key);
     }
-    const result = func.apply(this, arguments);
+    const result = func.apply(this, args);
     cache.set(key, result);
     return result;
   };
