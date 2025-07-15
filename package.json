@@ -5,9 +5,11 @@
 	"targets": {},
 	"scripts": {
 		"dev": "parcel watch src/js/*.ts --dist-dir ./web/dist",
-		"build": "parcel build src/js/*.ts --dist-dir ./web/dist"
+		"build": "parcel build src/js/*.ts --dist-dir ./web/dist",
+		"lint": "yarn exec biome lint --write src/js/**/*.ts src/js/**/*.vue src/scss/**/*.scss"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "2.1.1",
 		"@parcel/transformer-sass": "2.15.4",
 		"@parcel/transformer-vue": "2.15.4",
 		"@vue/compiler-sfc": "^3.5.17",
