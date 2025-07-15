@@ -1,12 +1,13 @@
-export default function throttle(func: Function, delay: number): Function {
+export default function throttle<T extends (...args: any[]) => void>(func: T, delay: number): (...args: Parameters<T>) => void {
   let wait: boolean = false;
-  return (...args) => {
+
+  return (...args: Parameters<T>): void => {
     if (wait) {
-        return;
+      return;
     }
     func(...args);
     wait = true;
-    setTimeout(() => {
+    setTimeout((): void => {
       wait = false;
     }, delay);
   }
