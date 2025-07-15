@@ -1,1 +1,1 @@
-console.log('wow, the home bundle!')
+console.log('wow, the home bundle!');

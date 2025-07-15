@@ -1,11 +1,10 @@
 import '../scss/style.scss';
 
-if(document.readyState !== 'loading') {
+if (document.readyState !== 'loading') {
 	runOnStart();
-}
-else {
-	document.addEventListener('DOMContentLoaded', function () {
-			runOnStart()
+} else {
+	document.addEventListener('DOMContentLoaded', () => {
+		runOnStart();
 	});
 }
 

@@ -1,16 +1,19 @@
-export default function throttle<T extends (...args: any[]) => void>(func: T, delay: number): (...args: Parameters<T>) => void {
-  let wait: boolean = false;
+export default function throttle<T extends (...args: unknown[]) => void>(
+	func: T,
+	delay: number,
+): (...args: Parameters<T>) => void {
+	let wait: boolean = false;
 
-  return (...args: Parameters<T>): void => {
-    if (wait) {
-      return;
-    }
-    func(...args);
-    wait = true;
-    setTimeout((): void => {
-      wait = false;
-    }, delay);
-  }
+	return (...args: Parameters<T>): void => {
+		if (wait) {
+			return;
+		}
+		func(...args);
+		wait = true;
+		setTimeout((): void => {
+			wait = false;
+		}, delay);
+	};
 }
 
 /*

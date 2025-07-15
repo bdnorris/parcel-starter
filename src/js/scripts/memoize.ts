@@ -1,14 +1,19 @@
-export default function memoize(func: Function): Function {
-  const cache: any = new Map();
-  return function(...args: any[]) {
-    const key: string = JSON.stringify(args);
-    if (cache.has(key)) {
-        return cache.get(key);
-    }
-    const result = func.apply(this, args);
-    cache.set(key, result);
-    return result;
-  };
+export default function memoize<T extends (...args: unknown[]) => unknown>(
+	func: T,
+): T {
+	const cache: Map<string, ReturnType<T>> = new Map();
+	return function (
+		this: ThisParameterType<T>,
+		...args: Parameters<T>
+	): ReturnType<T> {
+		const key: string = JSON.stringify(args);
+		if (cache.has(key)) {
+			return cache.get(key) as ReturnType<T>;
+		}
+		const result = func.apply(this, args) as ReturnType<T>;
+		cache.set(key, result);
+		return result;
+	} as T;
 }
 
 /*

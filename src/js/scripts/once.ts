@@ -1,12 +1,17 @@
-export default function once<T extends (...args: unknown[]) => unknown>(func: T): (...args: Parameters<T>) => ReturnType<T> {
-  let ran: boolean = false;
-  let result: ReturnType<T>;
-  return function(this: ThisParameterType<T>, ...args: Parameters<T>): ReturnType<T> {
-    if (ran) return result;
-    result = func.apply(this, args) as ReturnType<T>;
-    ran = true;
-    return result;
-  };
+export default function once<T extends (...args: unknown[]) => unknown>(
+	func: T,
+): (...args: Parameters<T>) => ReturnType<T> {
+	let ran: boolean = false;
+	let result: ReturnType<T>;
+	return function (
+		this: ThisParameterType<T>,
+		...args: Parameters<T>
+	): ReturnType<T> {
+		if (ran) return result;
+		result = func.apply(this, args) as ReturnType<T>;
+		ran = true;
+		return result;
+	};
 }
 
 /*

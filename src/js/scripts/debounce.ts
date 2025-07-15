@@ -1,9 +1,12 @@
-export default function debounce(func: Function, delay: number): Function {
-  let timeout: any = null;
-  return function() {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, arguments), delay);
-  };
+export default function debounce<T extends (...args: unknown[]) => unknown>(
+	func: T,
+	delay: number,
+): (...args: Parameters<T>) => void {
+	let timeout: ReturnType<typeof setTimeout> | null = null;
+	return function (this: ThisParameterType<T>, ...args: Parameters<T>) {
+		clearTimeout(timeout as ReturnType<typeof setTimeout>);
+		timeout = setTimeout(() => func.apply(this, args), delay);
+	};
 }
 
 /*
