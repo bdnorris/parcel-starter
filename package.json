@@ -9,19 +9,19 @@
 		"lint": "yarn exec biome lint --write src/js/**/*.ts src/js/**/*.vue src/scss/**/*.scss"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.1.1",
-		"@parcel/transformer-sass": "2.15.4",
-		"@parcel/transformer-vue": "2.15.4",
-		"@vue/compiler-sfc": "^3.5.17",
-		"sass": "^1.89.2",
-		"typescript": "^5.8.3"
+		"@biomejs/biome": "2.3.10",
+		"@parcel/transformer-sass": "2.16.3",
+		"@parcel/transformer-vue": "2.16.3",
+		"@vue/compiler-sfc": "^3.5.25",
+		"sass": "^1.97.0",
+		"typescript": "^5.9.3"
 	},
 	"dependencies": {
-		"@parcel/validator-typescript": "^2.15.4",
+		"@parcel/validator-typescript": "^2.16.3",
 		"@swc/helpers": "^0.5.17",
-		"parcel": "^2.15.4",
+		"parcel": "^2.16.3",
 		"regenerator-runtime": "^0.14.1",
-		"vue": "^3.5.17"
+		"vue": "^3.5.25"
 	},
 	"private": true,
 	"browserslist": "> 0.5%, last 2 versions, not dead"
